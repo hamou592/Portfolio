@@ -1,0 +1,769 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{/*this is for the font of the line*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: var(--lightColor);
+    scroll-behavior: smooth;
+}
+
+:root{
+    /*these are variables used to controls colors*/
+    --primaryColor:#ff274b;
+    --seondaryColor:#f7bcf7;
+    --lightColor:#ffffff;
+    --bfColor-1:#171a1c;
+    --bgColor-2:#22282a;
+    --padding:8%;
+}
+.home{
+    width: 100%;/*All th page for the width*/
+    height: 100vh;/*all the viw part for the height*/
+    background-color: var(--bfColor-1);/*make the color of background as the variable --bfColor-1*/
+    display: flex;
+    flex-direction: column;
+}
+
+span{/*this is used to change the color of the word "FOLIO"*/
+    color: var(--primaryColor);
+}
+.home nav h2{/*to style the word"PORTFOLIO"*/
+    font-size: 2.2rem;
+    cursor: pointer;    
+}
+.home nav{/*To style all of the navigation bar*/
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    /*this is used to make the ul at the left */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 40px;
+    z-index: 100;
+}
+nav ul li{/*to style the content of the list*/
+    list-style-type:none;
+    display: inline-block;
+    margin: 0.8rem;
+
+}
+nav ul li a{/*to chnge the color and the decoation of the content of the list*/
+    color: var(--lightColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+
+nav ul li a:hover{/*change the coler when we make the hover*/
+    color: var(--primaryColor);
+}
+
+.btn{/*style the button of SUBSCRIBE*/
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.8rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+.btn:hover{/*change the style of the button when we make the hover*/
+    background-color: transparent;
+    border: 2px solid var(--primaryColor);
+}
+.content{/*this is used to style the text which have the name*/
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container-texts{/*this is used to style the text which have the name*/
+    position: relative;
+    bottom: 70px;
+}
+/*this is used to style the text which have the name*/
+h1{
+    font-size: 4.65rem;
+    margin: 1.7rem 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 00.12rem;
+    color: var(--seondaryColor);
+}
+/*this is used to style the iconics of social media*/
+.social{
+    margin-top: 3.5rem;
+}
+.social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+.social img:hover{
+    transform: scale(1.2);
+}
+
+.home .container-images{
+    width: 45%;
+    height: 90%;
+    position: relative;
+    align-self: flex-end;
+}
+.home .container-images img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 1s,bottom 1s;
+}
+.home .container-images:hover .shape{
+    bottom: 5%;
+}
+.home .container-images:hover .pic{
+    left: 25%;
+}
+/*this is styling the secend section which is about "ABOUT"*/
+#about{
+    background-color: var(--bgColor-2);
+    padding: 7rem var(--padding);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 3s;
+}
+/*this is used when we do scroll it shows the content and hide it else*/
+.about{
+    background-color: var(--bgColor-2);
+}
+#about .container-images{
+    width: 35%;
+}
+#about .container-images img{
+    width: 90%;
+}
+#about .container-texts{
+    width: 35%;
+}
+p{
+    color: var(--seondaryColor);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+#services{
+    background-color: var(--bfColor-1);
+    padding: var(--padding);
+    height: 900px;
+    right: -100%;
+    position: relative;
+    transition: 3s;
+}
+.services{
+    background-color: var(--bfColor-1);
+}
+.text-center{
+    text-align: center;
+    letter-spacing: 2px;
+    transform: translateY(-120px);
+}
+/*this is styling the third section which is about "ABOUT"*/
+.card{
+    background-color: var(--bgColor-2);
+    padding: 0.8rem var(--padding);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+    transform: translateY(-50px);
+}
+.card h5{
+    font-size: 50px;
+    margin-top: 15px;
+    padding-top: 6%;
+}
+.card .image{
+    width: 75%;
+}
+/*this is styling the fourth section which is about "skills"*/
+#skills{
+    background-color: var(--bgColor-2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    left: -100%;
+    position: relative;
+    transition: 3s;
+}
+.skills{
+    background-color: var(--bgColor-2);
+}
+#skills .container-images{
+    width: 40%;
+}
+#skills .container-images img{
+    width: 90%;
+    transform: translateX(50px);
+}
+#skills .container-skills{
+    width: 50%;
+}
+#skills .container-skills h1{
+    transform: translateY(-40px);
+    
+}
+.content-skills{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+.skill{
+    width: 100px;
+    height: 100px;
+    background-color: var(--lightColor);
+    border-radius: 50px;
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill img{
+    width: 70%;
+}
+/*this is styling the fifth section which is about "footer"*/
+footer{
+    padding: 2rem var(--padding);
+    background-color: var(--bfColor-1);
+}
+footer .content-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .content-footer p{
+    color: var(--lightColor);
+    text-align: center;
+    width: 500px;
+    margin-top: 1rem;
+}
+footer .content-footer .end{
+    color: var(--primaryColor);
+    margin-top: 1rem;
+}
+
+/*styling the menu bar*/
+#menu {
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+/*this is for changing the shape of the three bar and make X*/
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#menu.is-active span:nth-child(1){
+    transform: translate(0px,-2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px,3px) rotate(-45deg);
+}
+#menu.is-active span{
+    background-color: var(--primaryColor);
+}
+/*media query*/
+
+/*this is for horizental phone*/
+@media screen and (min-width:576px) and (max-width:767px) {
+    :root{
+       --padding:1.5rem;
+    }   
+    html{
+        font-size: 13px;
+    }
+    /*first section*/
+    .home{
+        height: 865px;
+    }
+    .home .container-images{
+        display: none;
+    }
+    .content{
+        padding-top: 82px;
+    }
+    nav{
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: 82px;
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bfColor-1);
+        z-index: 100;
+    }
+    nav h2{
+        padding-bottom: 29px;
+        padding-top: 2rem;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        background: var(--bgColor-2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+    }
+    .home .container-texts{
+        bottom: 0;
+
+    }
+    .social{
+        margin-top: 30px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+    /*second section*/
+    
+    #menu{
+        display: block;
+        transform: translateY(-12px);
+        padding-top: 2rem;
+    }
+    #about .container-images{
+        display: none;
+    }
+    #about .container-texts{
+         width: 100%;
+         transform: translateY(30px);
+     }
+     /*third section*/
+    #services{
+         transform: translateY(-5px);
+     }
+     #services .text-center{
+         transform: translateY(-18px);
+     }
+     #services .card{
+         transform: translateY(20px);
+     }
+     #services .card .image{
+        display: none;
+    }
+    /*fourth section*/
+    #skills{
+        transform: translateY(-5px);
+    }
+    #skills .container-images{
+        display: none;
+    }
+    #skills .container-skills{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #skills .container-skills .content-skills{
+        transform: translateX(56px);
+    }
+    /*the fifth section*/
+    footer .content-footer{
+        width: 100%;
+    }
+    footer{
+        transform: translateY(-5px);
+        height: 165px;
+    }
+    footer::after{
+        display: none;
+    }
+}
+/*this is for vertical phone*/
+@media screen and (max-width:575px) {
+    :root{
+       --padding:1.5rem;
+    }   
+    html{
+        font-size: 13px;
+    }
+    /*first section*/
+    .home{
+        height: 865px;
+    }
+    .home .container-images{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;        
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bfColor-1);
+        z-index: 100;
+    }
+    nav h2{
+        padding-bottom: 29px;
+        padding-top: 2rem;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        background: var(--bgColor-2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+    }
+    .home .container-texts{
+        bottom: 0;
+
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-bottom: 70px;
+    }
+    /*second section*/
+    
+    #menu{
+        display: block;
+        transform: translateY(-12px);
+        padding-top: 2rem;
+    }
+    #about .container-images{
+        display: none;
+    }
+    #about .container-texts{
+         width: 100%;
+         transform: translateY(30px);
+     }
+     /*third section*/
+     #services{
+         transform: translateY(-5px);
+     }
+     #services .text-center{
+         transform: translateY(-18px);
+     }
+     #services .card{
+         transform: translateY(20px);
+     }
+     #services .card .image{
+        display: none;
+    }
+    /*fourth section*/
+    #skills{
+        transform: translateY(-5px);
+    }
+    #skills .container-images{
+        display: none;
+    }
+    #skills .container-skills{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #skills .container-skills .content-skills{
+        transform: translateX(56px);
+    }
+    /*the fifth section*/
+    footer .content-footer{
+        width: 100%;
+    }
+    footer{
+        transform: translateY(-5px);
+        height: 165px;
+    }
+    footer::after{
+        display: none;
+    }
+}
+/*this is for horizental tablete*/
+@media screen and (min-width:768px) and (max-width:991px) {
+    :root{
+       --padding:1.5rem;
+    }   
+    html{
+        font-size: 13px;
+    }
+    /*first section*/
+    .home{
+        height: 865px;
+    }
+    .home .container-images{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;        
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bfColor-1);
+        z-index: 100;
+    }
+    nav h2{
+        padding-bottom: 29px;
+        padding-top: 2rem;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vh;
+        height: 100vh;
+        background: var(--bgColor-2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+    }
+    .home .container-texts{
+        bottom: 0;
+
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-bottom: 70px;
+    }
+    /*second section*/
+    
+    #menu{
+        display: block;
+        transform: translateY(-12px);
+        padding-top: 2rem;
+    }
+    #about .container-images{
+        display: none;
+    }
+    #about .container-texts{
+         width: 100%;
+         transform: translateY(30px);
+     }
+     /*third section*/
+     #services{
+         transform: translateY(-5px);
+     }
+     #services .text-center{
+         transform: translateY(-18px);
+     }
+     #services .card{
+         transform: translateY(20px);
+     }
+     #services .card .image{
+        display: none;
+    }
+    /*fourth section*/
+    #skills{
+        transform: translateY(-5px);
+    }
+    #skills .container-images{
+        display: none;
+    }
+    #skills .container-skills{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #skills .container-skills .content-skills{
+        transform: translateX(56px);
+    }
+    /*the fifth section*/
+    footer .content-footer{
+        width: 100%;
+    }
+    footer{
+        transform: translateY(-5px);
+        height: 165px;
+    }
+    footer::after{
+        display: none;
+    }
+}
+/*this is for vertical tablete*/
+@media screen and (min-width:992px) and (max-width:1279px) {
+    :root{
+       --padding:1.5rem;
+    }   
+    html{
+        font-size: 13px;
+    }
+    /*first section*/
+    .home{
+        height: 865px;
+    }
+    .home .container-images img{
+        height: auto;
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;        
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bfColor-1);
+        z-index: 100;
+    }
+    nav h2{
+        padding-bottom: 29px;
+        padding-top: 2rem;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vh;
+        height: 100vh;
+        background: var(--bgColor-2);
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+    }
+    .home .container-texts{
+        bottom: 0;
+
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-bottom: 70px;
+    }
+    /*second section*/
+    
+    #menu{
+        display: block;
+        transform: translateY(-12px);
+        padding-top: 2rem;
+    }
+    #about .container-texts{
+         width: 60%;
+         transform: translateY(30px);
+     }
+     /*third section*/
+    .services{
+         transform: translateY(-5px);
+     }
+    #services .text-center{
+         transform: translateY(-18px);
+     }
+    #services .card{
+         transform: translateY(20px);
+    }
+    /*fourth section*/
+    #skills{
+        transform: translateY(-5px);
+    }
+    #skills .container-skills{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #skills .container-skills .content-skills{
+        transform: translateX(56px);
+    }
+    /*the fifth section*/
+    footer .content-footer{
+        width: 100%;
+    }
+    footer{
+        transform: translateY(-5px);
+        height: 165px;
+    }
+    footer::after{
+        display: none;
+    }
+}
